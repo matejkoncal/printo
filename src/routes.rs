@@ -14,7 +14,7 @@ pub fn upload_route() -> impl Filter<Extract = impl warp::Reply, Error = warp::R
 
 pub fn static_files_route(
 ) -> impl Filter<Extract = impl warp::Reply, Error = warp::Rejection> + Clone {
-    warp::get().and(warp::fs::dir("./"))
+    warp::get().and(warp::fs::dir("./build"))
 }
 
 pub fn print_file_route() -> impl Filter<Extract = impl warp::Reply, Error = warp::Rejection> + Clone

@@ -8,9 +8,11 @@ npm run build
 cd ..
 
 rm -rf ./release
-mkdir ./release
+rm -rf ./printo.zip
 
+mkdir ./release
 cp -avR ./printo-frontend/build ./release
 cp ./target/release/printo ./release
+
 cd ./release
 zip -r ../printo.zip ./
